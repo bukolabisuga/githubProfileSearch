@@ -1,0 +1,117 @@
+:root {
+    --color-main: #d33257;
+    --color-bg: #fbfbf5;
+    --color-border: rgba(0,0,0,.05);
+    --border: 1px solid var(--color-border);
+  }
+  
+  
+/* Typography */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: var(--color-bg);
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    font-size: 1.45rem;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--color-main);
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* .main-user */
+.main-user {
+    background: #fff;
+    padding: 15px;
+    max-width: 350px;
+    min-height: 300px;
+    margin: 1em;
+    border: var(--border);
+    box-shadow: 0 1px 1px var(--color-border);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin: 5px;
+    width: 50px;
+}
+
+#avatar {
+    width: 200px;
+}
+
+.btn {
+    background-color: var(--color-main);
+    padding: 1em;
+    color: var(--color-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .user-followers */
+.user-followers {
+    width: 100%;
+    max-width: 350px;
+}
+#followers {
+    text-align: center;
+    font-weight: bold;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+li {
+    background: #fff;
+    padding: 5px;
+    max-width: 100px;
+    margin: 1em;
+    border: var(--border);
+    box-shadow: 0 1px 1px var(--color-border);
+}
+
+/* .actions */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em;
+    width: 345px;
+}
+
+.actions input {
+    text-align: center;
+}

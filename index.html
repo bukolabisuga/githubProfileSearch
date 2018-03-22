@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Github Profile Viewer</title>
+        <!-- css stylesheet -->
+        <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|Overpass:300,700" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Github Profile Viewer</h1>
+            <div class="main-user">
+                <h3 id="loader">waiting for profile...</h3>
+                <div>
+                    <a id="github-link" href="" target="_blank">
+                        <img id="avatar" src="">
+                    </a>
+                </div>
+                <div id="name"></div>
+                <div id="username"></div>
+                <div id="bio"></div>
+                <div id="location"></div>
+            </div>
+            <div class="actions">
+                <input type="text" placeholder="enter github username">
+                <button class="btn" id="getProfile">get profile</button>
+            </div>
+            <div class="user-followers">
+                <div id="followers"></div>
+                
+                <ul id="list"></ul>
+                
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
