@@ -1,8 +1,11 @@
 var response = null;
-var followers = null;
 
 document.getElementsByTagName('button')[0].addEventListener('click', function (r) {
-    getUser(document.getElementsByTagName('input')[0].value);
+   var list = document.getElementById("list");
+   while (list.firstChild) {
+       list.removeChild(list.firstChild);
+   }
+   getUser(document.getElementsByTagName('input')[0].value);
 })
 
 function getUser(name) {
@@ -12,7 +15,7 @@ function getUser(name) {
         })
         .then(function (j) {
             response = j;
-            console.log(response);
+            // console.log(response);
             assignValues()
             getFollowers(j.followers_url)
         })
@@ -36,18 +39,17 @@ function getFollowers(url) {
             return r.json()
         })
         .then(function (f) {
-            followers = f
-            // console.log(followers)
-            listFollowers()
+            listFollowers(f)
         })
 }
 
-function listFollowers() {
+function listFollowers(followers) {
+
     followers.forEach(function (f) {
         var li = document.createElement('li')
         li.innerHTML = '<a href="' + f.html_url + '">'
             + '<img src="' + f.avatar_url + '" alt="' + f.login + '"/>'
             + '</a>';
-        document.getElementById('list').appendChild(li)
-    })
+        document.getElementById('list').appendChild(li) 
+    });
 }
